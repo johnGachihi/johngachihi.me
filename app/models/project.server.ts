@@ -51,6 +51,7 @@ interface Project extends Omit<ProjectSummary, "showcaseMedia"> {
   showcaseMedia: { image: string } | { muxVideoPlaybackId: string };
   githubLink?: string;
   liveLink?: string;
+  arxivLink?: string;
   shortDescription: string;
   technicalDescription: string;
 }
@@ -96,7 +97,7 @@ export async function fetchProject(slug: string): Promise<Project | null> {
   const query = `
     *[_type == "project" && slug.current == $slug]{
       "id": _id, title, "slug": slug.current, startedAt, githubLink,
-      liveLink, showcaseMedia, shortDescription, technicalDescription,
+      liveLink, arxivLink, showcaseMedia, shortDescription, technicalDescription,
       "tags": coalesce(tags, [])
     }[0]
   `;

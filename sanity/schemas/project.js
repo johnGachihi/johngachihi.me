@@ -57,6 +57,11 @@ export default {
             type: 'url',
         },
         {
+            name: 'arxivLink',
+            title: 'Arxiv Link',
+            type: 'url'
+        },
+        {
             name: 'tags',
             title: 'Tags',
             type: 'array',

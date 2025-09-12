@@ -9,6 +9,7 @@ import Tags from "~/components/tags";
 import { CSSTransition } from "react-transition-group";
 import Icon from '@mdi/react'
 import { mdiChevronUp, mdiChevronDown, mdiGithub, mdiLink } from '@mdi/js'
+import ArxivLogo from '../../../public/images/arxiv-logomark.svg'
 import { type LoaderFunction, type MetaFunction, Response } from "@remix-run/node";
 import style from "~/styles/project.css";
 import postStyle from "~/styles/post.css";
@@ -98,9 +99,18 @@ export default function Project() {
 
             {project.liveLink &&
               <ProjectLink
+                className="mr-2"
                 icon={<Icon path={mdiLink} className="w-6" />}
                 text="Live Project"
                 link={project.liveLink}
+              />
+            }
+
+            {project.arxivLink &&
+              <ProjectLink
+                icon={<img src={ArxivLogo} alt="Arxiv" aria-hidden className="h-6" />}
+                text="Arxiv"
+                link={project.arxivLink}
               />
             }
           </div>
