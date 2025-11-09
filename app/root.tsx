@@ -63,7 +63,7 @@ export const meta: MetaFunction = () => ({
 const Fathom = () => {
   const location = useLocation();
 
-  useEffect(() => load("RGSIUMNB", {
+  useEffect(() => load("EIITTMGW", {
     url: "https://fresh-fortunate.johngachihi.me/script.js"
   }), []);
 
