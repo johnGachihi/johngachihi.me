@@ -86,7 +86,7 @@ export default function Project() {
 
         {showcaseMedia && <div className="mb-6">{showcaseMedia}</div>}
 
-        {(project.githubLink || project.liveLink) &&
+        {(project.githubLink || project.liveLink || project.arxivLink) &&
           <div className="flex mb-4 md:mb-6">
             {project.githubLink &&
               <ProjectLink
